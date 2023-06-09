@@ -1,0 +1,11 @@
+.wrapper {
+  display: flex;
+}
+.aside {
+  background: red;
+  flex: 2;
+}
+.gallery {
+  flex: 8;
+  background: blue;
+}
