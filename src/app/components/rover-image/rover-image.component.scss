@@ -1,0 +1,35 @@
+.wrapper {
+  z-index: 0;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.rover-image {
+  height: 150px;
+  width: 150px;
+  z-index: 1;
+}
+.rover-image:hover {
+  filter: blur(4px);
+  background: white;
+  color: red;
+}
+.description {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.visible {
+  visibility: visible;
+  color: #ffffff;
+}
+.invisible {
+  visibility: hidden;
+  color: #ffffff;
+}
+
+.centered {
+}

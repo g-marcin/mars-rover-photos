@@ -1,1 +1,57 @@
-<p>photo-form works!</p>
+<form class="form" #photoForm="ngForm" (ngSubmit)="onSubmit($event)">
+  {{ photoForm.value | json }}
+  <label for="">
+    <div>Please pick your rover:</div>
+    <select
+      name="rover"
+      id="rover"
+      #name="ngModel"
+      ngModel
+      [(ngModel)]="model.rover"
+    >
+      <option value="curiosity">Curiosity</option>
+      <option value="opportunity">Opportunity</option>
+      <option value="spirit">Spirit</option>
+    </select>
+  </label>
+  <div class="row">
+    <label for="">
+      <div>Please pick your sol...</div>
+      <input
+        type="number"
+        min="1"
+        max="1000"
+        name="sol"
+        value="1"
+        [(ngModel)]="model.sol"
+        #name="ngModel"
+      />
+    </label>
+    _OR_
+    <label for="">
+      <div>Please pick your earth date...</div>
+      <input
+        type="date"
+        name="date"
+        ngModel
+        #name="ngModel"
+        [(ngModel)]="model.date"
+      />
+    </label>
+  </div>
+  <label for="">
+    Please pick your camera...
+    <select
+      name="camera"
+      id="camera"
+      #name="ngModel"
+      ngModel
+      [(ngModel)]="model.camera"
+    >
+      <option value="fhaz">Front Hazard Avoidance Camera</option>
+      <option value="rhaz">Rear Hazard Avoidance Camera</option>
+      <option value="navcam">Navigation Camera</option>
+    </select>
+  </label>
+  <input type="submit" title="Submit" />
+</form>

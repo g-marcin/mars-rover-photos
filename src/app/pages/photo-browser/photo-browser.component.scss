@@ -2,10 +2,14 @@
   display: flex;
 }
 .aside {
-  background: red;
+  background: gray;
   flex: 2;
 }
 .gallery {
   flex: 8;
-  background: blue;
+  background: white;
+}
+.gallery:nth-child(2) {
+  flex: 8;
+  background: white;
 }

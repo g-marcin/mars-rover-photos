@@ -1,1 +1,6 @@
-<p>photo-gallery works!</p>
+<div class="wrapper">
+  <app-rover-image
+    *ngFor="let element of roverData.photos"
+    [imageSrc]="element['img_src']"
+  ></app-rover-image>
+</div>
