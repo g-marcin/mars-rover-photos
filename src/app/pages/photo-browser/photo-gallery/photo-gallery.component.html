@@ -2,5 +2,6 @@
   <app-rover-image
     *ngFor="let element of roverData.photos"
     [imageSrc]="element['img_src']"
+    [roverData]="element"
   ></app-rover-image>
 </div>
