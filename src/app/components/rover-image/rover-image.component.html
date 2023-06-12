@@ -1,13 +1,21 @@
 <div class="wrapper">
   <div [class]="isDescription">
-    <span>Photo id: {{ roverData.id | json }}</span>
-    <span>Sol: {{ roverData.sol | json }}</span>
-    <span>Earth Date: {{ roverData.earth_date | json }}</span>
-    <span>Launch Date: {{ roverData.rover.launch_date | json }}</span>
-    <span>Landing Date: {{ roverData.rover.landing_date | json }}</span>
-    <span>Status: {{ roverData.rover.status | json }}</span>
-    <span></span>
-    <span></span>
+    <div class="description-item">Photo id: {{ roverData.id | json }}</div>
+    <div class="description-item">Sol: {{ roverData.sol | json }}</div>
+    <div class="description-item">
+      Earth Date: {{ roverData.earth_date | json }}
+    </div>
+    <div class="description-item">
+      Launch Date: {{ roverData.rover.launch_date | json }}
+    </div>
+    <div class="description-item">
+      Landing Date: {{ roverData.rover.landing_date | json }}
+    </div>
+    <div class="description-item">
+      Mission Status: {{ roverData.rover.status | json }}
+    </div>
+    <div class="description-item"></div>
+    <div class="description-item"></div>
   </div>
   <button>
     <img

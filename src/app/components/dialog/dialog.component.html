@@ -1,6 +1,12 @@
 <div class="wrapper">
-  <div class="bar">
-    <button class="close" (click)="dialogCloseHandler()">x</button>
-  </div>
-  <img [src]="dialogData.imageSrc" alt="" />
+  <button
+    mat-icon-button
+    color="warning"
+    class="close"
+    (click)="dialogCloseHandler()"
+  >
+    <mat-icon>close</mat-icon>
+  </button>
+
+  <img [src]="dialogData.imageSrc" alt="zoomed-picture" class="img" />
 </div>

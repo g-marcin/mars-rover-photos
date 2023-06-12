@@ -1,8 +1,9 @@
-<h1>Browse Rover Photos:</h1>
 <form class="form" #photoForm="ngForm" (ngSubmit)="onSubmit($event)">
+  <h1>Browse Rover Photos:</h1>
   <label for="">
     <div>Please pick your rover:</div>
     <select
+      class="rover-select"
       name="rover"
       id="rover"
       #name="ngModel"
@@ -14,20 +15,20 @@
       <option value="spirit">Spirit</option>
     </select>
   </label>
-  <div class="row">
-    <label for="">
-      <div>Please pick your sol...</div>
-      <input
-        type="number"
-        min="1"
-        max="1000"
-        name="sol"
-        value="1"
-        [(ngModel)]="model.sol"
-        #name="ngModel"
-      />
-    </label>
-    <!-- _OR_
+
+  <label for="">
+    <div>Please pick your sol...</div>
+
+    <input
+      type="number"
+      min="1"
+      name="sol"
+      value="1"
+      [(ngModel)]="model.sol"
+      #name="ngModel"
+    />
+  </label>
+  <!-- _OR_
     <label for="">
       <div>Please pick your earth date...</div>
       <input
@@ -38,7 +39,7 @@
         [(ngModel)]="model.date"
       />
     </label> -->
-  </div>
+
   <label for="">
     Please pick your camera...
     <select
@@ -54,5 +55,5 @@
       <option value="navcam">Navigation Camera</option>
     </select>
   </label>
-  <input type="submit" title="Submit" name="Submit" label="submit" />
+  <button type="button" (click)="onSubmit($event)">Explore</button>
 </form>
