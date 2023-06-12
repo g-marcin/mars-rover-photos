@@ -1,15 +1,20 @@
 .wrapper {
   display: flex;
+  min-height: 1vh;
 }
 .aside {
-  background: gray;
-  flex: 2;
+  flex: 1;
+  padding: 5px;
+  display: flex;
+
+  background: url(../../../assets/741557.jpg);
+  color: white;
 }
 .gallery {
   flex: 8;
-  background: white;
-}
-.gallery:nth-child(2) {
-  flex: 8;
-  background: white;
+  background: linear-gradient(
+    45deg,
+    rgba(2, 22, 49, 1) 0%,
+    rgba(5, 55, 123, 1) 86%
+  );
 }

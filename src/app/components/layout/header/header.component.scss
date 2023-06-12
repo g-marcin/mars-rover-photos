@@ -1,5 +1,5 @@
 header {
-  background: black;
+  background: url(../../../../assets/741557.jpg);
   color: white;
   text-align: center;
   display: flex;
@@ -10,6 +10,8 @@ header {
 }
 a {
   cursor: pointer;
+  text-decoration: none;
+  color: white;
 }
 .menu-box {
   display: flex;

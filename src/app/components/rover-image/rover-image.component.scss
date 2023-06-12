@@ -5,12 +5,13 @@
   color: white;
 }
 .rover-image {
-  height: 150px;
-  width: 150px;
+  height: 200px;
+  width: 200px;
   z-index: 1;
+  box-shadow: rgba(1, 1, 15, 0.1) 0px 8px 24px,
+    rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
 }
-.rover-image:hover {
-}
+
 .description {
   position: absolute;
   top: 50%;
@@ -22,6 +23,10 @@
   font-size: 12px;
   cursor: pointer;
   pointer-events: none;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 .visible {
@@ -35,4 +40,10 @@
 
 .blur {
   filter: blur(4px);
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
 }

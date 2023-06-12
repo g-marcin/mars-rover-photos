@@ -1,21 +1,22 @@
 <div class="wrapper">
   <div [class]="isDescription">
-    <span>Photo id:{{ roverData.id | json }}</span>
-    <span>Sol:{{ roverData.sol | json }}</span>
-    <span>Earth Date:{{ roverData.earth_date | json }}</span>
-    <span>Launch Date{{ roverData.rover.launch_date | json }}</span>
-    <span>Landing Date:{{ roverData.rover.landing_date | json }}</span>
-    <span>Status{{ roverData.rover.status | json }}</span>
+    <span>Photo id: {{ roverData.id | json }}</span>
+    <span>Sol: {{ roverData.sol | json }}</span>
+    <span>Earth Date: {{ roverData.earth_date | json }}</span>
+    <span>Launch Date: {{ roverData.rover.launch_date | json }}</span>
+    <span>Landing Date: {{ roverData.rover.landing_date | json }}</span>
+    <span>Status: {{ roverData.rover.status | json }}</span>
     <span></span>
     <span></span>
   </div>
-  <a href="">
+  <button>
     <img
+      (click)="openDialog(imageSrc)"
       [src]="imageSrc"
       alt="rover-image"
       [class]="roverImageStyle"
       (mouseenter)="showDescription()"
       (mouseout)="hideDescription($event)"
     />
-  </a>
+  </button>
 </div>

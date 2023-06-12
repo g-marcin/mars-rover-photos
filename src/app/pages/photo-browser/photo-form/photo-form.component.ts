@@ -12,7 +12,6 @@ export class PhotoFormComponent {
   model = { rover: '', sol: 1, date: '', camera: '' };
 
   onSubmit(event: any) {
-    console.log(this.model);
     this.roverPhotosService.setGalleryOptions(this.model);
   }
 }
