@@ -1,0 +1,28 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.close {
+  position: absolute;
+  background: #031a3a;
+  color: #ffffff;
+  opacity: 0.8;
+  z-index: 3;
+  left: 92%;
+  top: 2%;
+}
+
+.img {
+  z-index: 2;
+  height: 70vh;
+  width: 50vw;
+}
+
+.bar {
+  background: url(../../../assets/741557.jpg);
+  display: flex;
+  align-content: end;
+  justify-content: end;
+}

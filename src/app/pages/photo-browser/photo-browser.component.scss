@@ -1,0 +1,22 @@
+.wrapper {
+  display: flex;
+  min-height: 96vh;
+}
+.aside {
+  flex: 4;
+  padding: 5px;
+  display: flex;
+  background: url(../../../assets/741557.jpg);
+  color: white;
+}
+.gallery {
+  flex: 32;
+  background: linear-gradient(45deg, rgba(2, 22, 49, 1) 0%, rgb(2, 3, 5) 86%);
+}
+
+.opened {
+  flex: 4;
+}
+.closed {
+  flex: 1;
+}

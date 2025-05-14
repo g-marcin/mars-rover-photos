@@ -1,0 +1,20 @@
+header {
+  background: url(../../../../assets/741557.jpg);
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  align-items: center;
+  padding: 0 10px;
+}
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
+.menu-box {
+  display: flex;
+  justify-content: space-between;
+  min-width: 250px;
+}

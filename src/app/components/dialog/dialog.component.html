@@ -1,0 +1,12 @@
+<div class="wrapper">
+  <button
+    mat-icon-button
+    color="warning"
+    class="close"
+    (click)="dialogCloseHandler()"
+  >
+    <mat-icon>close</mat-icon>
+  </button>
+
+  <img [src]="dialogData.imageSrc" alt="zoomed-picture" class="img" />
+</div>

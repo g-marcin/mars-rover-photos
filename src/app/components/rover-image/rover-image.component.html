@@ -1,0 +1,30 @@
+<div class="wrapper">
+  <div [class]="isDescription">
+    <div class="description-item">Photo id: {{ roverData.id | json }}</div>
+    <div class="description-item">Sol: {{ roverData.sol | json }}</div>
+    <div class="description-item">
+      Earth Date: {{ roverData.earth_date | json }}
+    </div>
+    <div class="description-item">
+      Launch Date: {{ roverData.rover.launch_date | json }}
+    </div>
+    <div class="description-item">
+      Landing Date: {{ roverData.rover.landing_date | json }}
+    </div>
+    <div class="description-item">
+      Mission Status: {{ roverData.rover.status | json }}
+    </div>
+    <div class="description-item"></div>
+    <div class="description-item"></div>
+  </div>
+  <button>
+    <img
+      (click)="openDialog(imageSrc)"
+      [src]="imageSrc"
+      alt="rover-image"
+      [class]="roverImageStyle"
+      (mouseenter)="showDescription()"
+      (mouseout)="hideDescription($event)"
+    />
+  </button>
+</div>

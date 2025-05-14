@@ -1,0 +1,48 @@
+<form class="form" #photoForm="ngForm" (ngSubmit)="onSubmit($event)">
+  <h1>Browse Rover Photos:</h1>
+  <label for="">
+    <div>Please pick your rover:</div>
+    <select
+      class="rover-select"
+      name="rover"
+      id="rover"
+      #name="ngModel"
+      ngModel
+      [(ngModel)]="model.rover"
+    >
+      <option value="curiosity">Curiosity</option>
+      <option value="opportunity">Opportunity</option>
+      <option value="spirit">Spirit</option>
+    </select>
+  </label>
+
+  <label for="">
+    <div>Please pick your sol...</div>
+
+    <input
+      type="number"
+      min="1"
+      name="sol"
+      value="1"
+      [(ngModel)]="model.sol"
+      #name="ngModel"
+    />
+  </label>
+
+  <label for="">
+    Please pick your camera...
+    <select
+      name="camera"
+      id="camera"
+      #name="ngModel"
+      ngModel
+      [(ngModel)]="model.camera"
+    >
+      <option value="">All</option>
+      <option value="fhaz">Front Hazard Avoidance Camera</option>
+      <option value="rhaz">Rear Hazard Avoidance Camera</option>
+      <option value="navcam">Navigation Camera</option>
+    </select>
+  </label>
+  <button type="button" (click)="onSubmit($event)">Explore</button>
+</form>
