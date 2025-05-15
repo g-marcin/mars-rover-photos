@@ -3,14 +3,27 @@
   position: relative;
   text-align: center;
   color: white;
+  height: 100%;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
 }
 .rover-image {
   height: 200px;
-  width: 200px;
-  z-index: 1;
+  width: 100%;
+  object-fit: cover;
   border-radius: 12px;
   box-shadow: rgba(1, 1, 15, 0.1) 0px 8px 24px,
-    rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+    rgba(17, 17, 26, 0.1) 0px 16px 56px,
+    rgba(17, 17, 26, 0.1) 0px 24px 80px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+      rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  }
 }
 
 .description {
@@ -22,21 +35,27 @@
   display: flex;
   flex-direction: column;
   font-size: 12px;
-
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+  padding: 10px;
+  backdrop-filter: blur(4px);
   cursor: pointer;
   pointer-events: none;
-  width: 150px;
-  height: 150px;
-  gap: 15px;
+  width: 80%;
+  height: auto;
+  gap: 8px;
   align-items: center;
+  transition: all 0.3s ease;
 }
 
 .visible {
   visibility: visible;
+  opacity: 1;
   color: #ffffff;
 }
 .invisible {
   visibility: hidden;
+  opacity: 0;
   color: #ffffff;
 }
 
@@ -48,9 +67,38 @@ button {
   background: none;
   border: none;
   cursor: pointer;
+  padding: 0;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    border-radius: 12px;
+  }
+
+  &:hover:after {
+    opacity: 1;
+  }
 }
 
 .description-item {
   display: flex;
   justify-content: space-between;
+  width: 100%;
+  font-weight: 500;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding-bottom: 4px;
+  }
 }

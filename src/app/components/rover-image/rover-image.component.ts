@@ -29,7 +29,7 @@ export class RoverImageComponent {
     this.roverImageStyle += ' blur';
   }
   hideDescription(e: any) {
-    if (e.relatedTarget.tagName === 'SPAN') {
+    if (e.relatedTarget && e.relatedTarget.tagName === 'SPAN') {
       return;
     }
     this.isDescriptionSubject.next('description invisible');
@@ -38,11 +38,16 @@ export class RoverImageComponent {
 
   openDialog(imageSrc: string) {
     const dialogRef = this.dialog.open(DialogComponent, {
-      data: { imageSrc: imageSrc }, // Pass any required data to the dialog
+      data: {
+        imageSrc: imageSrc,
+        roverData: this.roverData,
+      },
+      maxWidth: '95vw',
+      panelClass: 'custom-dialog-container',
     });
 
     dialogRef.afterClosed().subscribe((result) => {
-      console.log('Dialog closed:', result);
+      console.log('Dialog closed');
     });
   }
 }

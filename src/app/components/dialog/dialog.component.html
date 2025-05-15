@@ -1,12 +1,26 @@
 <div class="wrapper">
   <button
     mat-icon-button
-    color="warning"
+    color="primary"
     class="close"
     (click)="dialogCloseHandler()"
   >
     <mat-icon>close</mat-icon>
   </button>
 
-  <img [src]="dialogData.imageSrc" alt="zoomed-picture" class="img" />
+  <div class="bar">
+    <h3>Mars Rover Image</h3>
+  </div>
+
+  <img [src]="dialogData.imageSrc" alt="Mars Rover Image" class="img" />
+  
+  <div class="image-info" *ngIf="dialogData.roverData">
+    <h3>Image Details</h3>
+    <p><strong>Photo ID:</strong> {{dialogData.roverData?.id}}</p>
+    <p><strong>Sol:</strong> {{dialogData.roverData?.sol}}</p>
+    <p><strong>Earth Date:</strong> {{dialogData.roverData?.earth_date}}</p>
+    <p><strong>Camera:</strong> {{dialogData.roverData?.camera?.full_name}} ({{dialogData.roverData?.camera?.name}})</p>
+    <p><strong>Rover:</strong> {{dialogData.roverData?.rover?.name}}</p>
+    <p><strong>Rover Status:</strong> {{dialogData.roverData?.rover?.status}}</p>
+  </div>
 </div>

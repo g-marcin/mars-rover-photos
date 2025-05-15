@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-photo-browser',
@@ -7,5 +6,9 @@ import { BehaviorSubject } from 'rxjs';
   styleUrls: ['./photo-browser.component.scss'],
 })
 export class PhotoBrowserComponent {
-  toggleMenu() {}
+  isMenuOpen: boolean = true;
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
 }

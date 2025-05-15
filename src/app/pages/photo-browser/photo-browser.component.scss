@@ -1,22 +1,86 @@
 .wrapper {
   display: flex;
-  min-height: 96vh;
+  flex-direction: row;
+  min-height: calc(100vh - 125px);
+  transition: all 0.3s ease;
 }
 .aside {
   flex: 4;
-  padding: 5px;
+  padding: 15px;
   display: flex;
-  background: url(../../../assets/741557.jpg);
+  background: linear-gradient(135deg, rgba(3, 26, 58, 0.8) 0%, rgba(8, 20, 38, 0.8) 100%), url(../../../assets/741557.jpg);
+  background-position: center;
+  background-size: cover;
   color: white;
+  position: relative;
+  transition: all 0.3s ease;
 }
 .gallery {
   flex: 32;
   background: linear-gradient(45deg, rgba(2, 22, 49, 1) 0%, rgb(2, 3, 5) 86%);
+  overflow: auto;
+  transition: all 0.3s ease;
+}
+.toggle-btn {
+  position: absolute;
+  top: 10px;
+  right: -15px;
+  background: rgba(3, 26, 58, 0.9);
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background: rgba(8, 20, 38, 1);
+    transform: scale(1.1);
+  }
 }
 
 .opened {
   flex: 4;
 }
 .closed {
-  flex: 1;
+  flex: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+// Responsive adjustments
+@media (max-width: 1024px) {
+  .aside {
+    flex: 5;
+  }
+  
+  .gallery {
+    flex: 25;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    flex-direction: column;
+  }
+  
+  .aside {
+    flex: auto;
+    max-height: none;
+  }
+  
+  .gallery {
+    flex: auto;
+    min-height: 70vh;
+  }
+  
+  .toggle-btn {
+    display: none;
+  }
 }

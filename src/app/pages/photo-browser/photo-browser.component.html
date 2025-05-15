@@ -1,6 +1,12 @@
 <div class="wrapper">
-  <aside class="aside">
-    <app-photo-form></app-photo-form>
+  <aside [ngClass]="isMenuOpen ? 'aside opened' : 'aside closed'">
+    <button class="toggle-btn" (click)="toggleMenu()" *ngIf="isMenuOpen">
+      <mat-icon>chevron_left</mat-icon>
+    </button>
+    <button class="toggle-btn" (click)="toggleMenu()" *ngIf="!isMenuOpen">
+      <mat-icon>chevron_right</mat-icon>
+    </button>
+    <app-photo-form *ngIf="isMenuOpen"></app-photo-form>
   </aside>
   <main class="gallery">
     <app-photo-gallery></app-photo-gallery>

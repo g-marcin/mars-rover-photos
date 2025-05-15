@@ -1,9 +1,25 @@
 .wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  padding: 5px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
   justify-content: center;
+  opacity: 0.95;
+  transition: all 0.3s ease;
 
-  opacity: 0.9;
+  &:hover {
+    opacity: 1;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 15px;
+    padding: 15px;
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+    padding: 10px;
+  }
 }
