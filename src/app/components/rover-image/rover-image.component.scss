@@ -5,12 +5,17 @@
   color: white;
 }
 .rover-image {
-  height: 200px;
-  width: 200px;
+  height: 500px;
+  width: calc(100vb - 32px);
   z-index: 1;
   border-radius: 12px;
   box-shadow: rgba(1, 1, 15, 0.1) 0px 8px 24px,
     rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+
+  @media (min-width:500px){
+    height: 200px;
+    width: 200px;
+  }
 }
 
 .description {

@@ -2,8 +2,12 @@
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  padding: 5px;
+  padding: 0 16px;
   justify-content: center;
 
   opacity: 0.9;
+
+  @media (min-width:500px) {
+    padding: 0 32px;
+  }
 }

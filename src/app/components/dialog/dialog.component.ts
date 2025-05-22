@@ -24,4 +24,8 @@ export class DialogComponent {
   dialogCloseHandler() {
     this.dialogRef.close();
   }
+
+  dialogInfoHandler() {
+    this.dialogRef.close();
+  }
 }

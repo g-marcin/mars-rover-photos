@@ -1,13 +1,16 @@
 .wrapper {
   display: flex;
-  min-height: 96vh;
+  min-height: 100vh;
 }
 .aside {
   flex: 4;
-  padding: 5px;
-  display: flex;
+  display: none;
   background: url(../../../assets/741557.jpg);
   color: white;
+
+  @media(min-width: 660px) {
+    display: flex;
+  }
 }
 .gallery {
   flex: 32;

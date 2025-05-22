@@ -7,6 +7,15 @@
   >
     <mat-icon>close</mat-icon>
   </button>
+  <button
+    mat-icon-button
+    color="warning"
+    class="info"
+    (click)="dialogInfoHandler()"
+  >
+    <mat-icon>info</mat-icon>
+  </button>
 
   <img [src]="dialogData.imageSrc" alt="zoomed-picture" class="img" />
+  <div></div>
 </div>
