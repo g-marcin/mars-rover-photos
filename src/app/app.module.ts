@@ -16,6 +16,7 @@ import { PhotoFormComponent } from './pages/photo-browser/photo-form/photo-form.
 import { PhotoGalleryComponent } from './pages/photo-browser/photo-gallery/photo-gallery.component';
 import { RoverImageComponent } from './components/rover-image/rover-image.component';
 import { DialogComponent } from './components/dialog/dialog.component';
+import { SplashScreenComponent } from './pages/splash-screen/splash-screen.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { DialogComponent } from './components/dialog/dialog.component';
     PhotoGalleryComponent,
     RoverImageComponent,
     DialogComponent,
+    SplashScreenComponent,
   ],
   imports: [
     BrowserModule,

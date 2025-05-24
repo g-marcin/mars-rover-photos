@@ -37,8 +37,16 @@ export class RoverImageComponent {
   }
 
   openDialog(imageSrc: string) {
+
     const dialogRef = this.dialog.open(DialogComponent, {
+      width: '100vw',
+      height: '100vh',
+      maxWidth: '100vw',
+      maxHeight: '100vh',
+      panelClass: 'full-screen-dialog',
+      backdropClass: 'custom-dialog-backdrop',
       data: { imageSrc: imageSrc }, // Pass any required data to the dialog
+
     });
 
     dialogRef.afterClosed().subscribe((result) => {

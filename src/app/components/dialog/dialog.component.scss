@@ -1,11 +1,13 @@
 .wrapper {
   display: flex;
+  width: 100vw;
+  height: 100vh;
   flex-direction: column;
   z-index: 1;
   overflow: hidden;
   border-radius: 8px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-  background-color: #f5f5f5;
+  background:  linear-gradient(45deg, rgb(2, 22, 49) 0%, rgb(2, 3, 5) 86%);
 }
 
 .close {
@@ -14,7 +16,7 @@
   color: #ffffff;
   opacity: 0.8;
   z-index: 3;
-  left: 92%;
+  right: 26px;
   top: 2%;
   
 }
@@ -26,26 +28,26 @@
   color: #ffffff;
   opacity: 0.8;
   z-index: 3;
-  left: 84%;
+  right: 90px;
   top: 2%;
   
 }
 
 .img {
   z-index: 2;
-  width: 360px;
+  height: 100vh;
   overflow: hidden;
   transition: transform 0.3s ease;
   object-fit: contain;
-  margin: 0 auto;
 
-  @media (min-width: 660px) {
-    width: 628px;
-  }
 
-  @media (min-width: 992px) {
-    width: 928px;
-  }
+  // @media (min-width: 660px) {
+  //   width: 628px;
+  // }
+
+  // @media (min-width: 992px) {
+  //   width: 928px;
+  // }
 
   // &:hover {
   //   transform: scale(1.02);

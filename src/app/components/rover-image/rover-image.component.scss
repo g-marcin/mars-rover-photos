@@ -5,8 +5,8 @@
   color: white;
 }
 .rover-image {
-  height: 500px;
-  width: calc(100vb - 32px);
+  height: 45vh;
+  width: calc(100vw - 32px);
   z-index: 1;
   border-radius: 12px;
   box-shadow: rgba(1, 1, 15, 0.1) 0px 8px 24px,
@@ -58,4 +58,8 @@ button {
 .description-item {
   display: flex;
   justify-content: space-between;
+}
+
+.custom-dialog-backdrop {
+  background-color: rgba(18, 18, 18, 0.95); /* Almost black, slightly transparent */
 }
